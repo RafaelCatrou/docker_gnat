@@ -46,7 +46,7 @@ RUN \
     tar -zxvf 5739cefdc7a447658e0b016b && \
     rm -f 5739cefdc7a447658e0b016b
 
-# Install
+# Install GNAT
 COPY src/gnat_install.expect /root/tools/gnat/gnat-gpl-2016-x86_64-linux-bin
 
 WORKDIR /root/tools/gnat/gnat-gpl-2016-x86_64-linux-bin
