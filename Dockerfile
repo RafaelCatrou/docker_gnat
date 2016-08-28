@@ -99,12 +99,13 @@ RUN apt-get install -y gtkwave
 RUN mkdir -p /root/tools/gnat
 # Unzip
 WORKDIR /root/tools/gnat
-RUN wget http://mirrors.cdn.adacore.com/art/5739cefdc7a447658e0b016b
-RUN mv 5739cefdc7a447658e0b016b gnat-gpl-2016-x86_64-linux-bin.tar.gz
-
 RUN \
-    tar -zxvf gnat-gpl-2016-x86_64-linux-bin.tar.gz && \
-    \rm gnat-gpl-2016-x86_64-linux-bin.tar.gz
+    wget http://mirrors.cdn.adacore.com/art/5739cefdc7a447658e0b016b && \
+    mv 5739cefdc7a447658e0b016b gnat-gpl-2016-x86_64-linux-bin.tar.gz && \
+    sync
+
+RUN tar -zxvf gnat-gpl-2016-x86_64-linux-bin.tar.gz
+RUN \rm gnat-gpl-2016-x86_64-linux-bin.tar.gz
 
 COPY src/gnat_install.expect /root/tools/gnat/gnat-gpl-2016-x86_64-linux-bin
 # Install
