@@ -78,17 +78,3 @@ ENV PATH /usr/gnat/bin:$PATH
 # Valid that installation is fine
 RUN which gnat
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
