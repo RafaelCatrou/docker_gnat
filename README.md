@@ -1,6 +1,29 @@
-# docker_gnat
-Build GNAT Ada 2016 GPL using Docker
+# Docker: GNAT GPL 2016
+
+### Table of Contents
+**[Goal](#goal)**  
+**[Demo](#demo)**  
+**[Example](#example)**
+
+## Goal
+
+Provide GNAT GPL 2016 as a [Docker](https://www.docker.com/) container.
+
+## Demo
+
+### Get the image
 
 ```bash
-sudo docker build -t="docker_gnat" .
+sudo docker pull rafaelcatrou/docker_gnat
 ```
+
+### Run
+
+```bash
+sudo docker run --rm -t -i rafaelcatrou/docker_gnat /bin/bash
+```
+
+## Example
+
+Ada "Hello World": [Hello World](https://gcc.gnu.org/onlinedocs/gnat_ugn/Running-a-Simple-Ada-Program.html)
+
